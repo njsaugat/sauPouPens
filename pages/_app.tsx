@@ -1,3 +1,4 @@
+import Navbar from "../components/Navbar";
 import "../styles/globals.css";
 
 type MyAppProps = {
@@ -5,7 +6,12 @@ type MyAppProps = {
   pageProps: Record<string, any>;
 };
 function MyApp({ Component, pageProps }: MyAppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Navbar />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp;
