@@ -22,5 +22,7 @@ if (!firebase.apps.length) {
 
 // nice way to export since only this place has to be changed
 export const auth = firebase.auth;
+export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
 export const firestore = firebase.firestore();
 export const storage = firebase.storage();
