@@ -1,7 +1,10 @@
 import Link from "next/dist/client/link";
+import toast from "react-hot-toast";
+
 // import Image from 'next/image'
 const Navbar = () => {
   const [user, username] = [null, null];
+  const showLoginToast = () => toast.success("You are on the verge to login");
   return (
     <nav className="navbar">
       <ul>
@@ -28,7 +31,9 @@ const Navbar = () => {
             <>
               <li>
                 <Link href={"/enter"}>
-                  <button className="btn-blue">Log in</button>
+                  <button className="btn-blue" onClick={showLoginToast}>
+                    Log in
+                  </button>
                 </Link>
               </li>
             </>
